@@ -1,0 +1,206 @@
+<html lang="en">
+	<head>
+	<title>Home Page</title>
+
+		<link rel=stylesheet type="text/css" href="css/general.css">
+		<link rel=stylesheet type="text/css" href="css/default.css">
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			
+	</head>
+	<body>
+		
+		  
+
+		<table class="nav">
+			<tr>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/default.html" class="nav"><b>Home</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/news/luncheons.html" class="nav"><b>Luncheons</a></b></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/classmates/addresses.html" class="nav"><b>Classmates<br/> & Addresses</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/classmates/states.html" class="nav"><b>Classmates<br/> By State</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/classmates/obit.html" class="nav"><b>Obituaries</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/202530.html" class="nav"><b>20th, 25th, 30th<br/> reunions</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/4045.html" class="nav"><b>40th, 45th<br/> reunions</a></b></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/50.html" class="nav"><b>50th<br/> reunion</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/55.html" class="nav"><b>55th<br/> reunion</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/60.html" class="nav"><b>60th<br/>reunion</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/65.html" class="nav"><b>65th<br/>reunion</b></a></td>
+				<td class="nav"><a href="http://cyclops153.brinkster.net/reunions/picnic.html" class="nav"><b>Picnic</b></a></td>
+			</tr>
+		</table>
+			<br />
+
+		<table class="def">
+			<tr>
+				<td class="def1">
+					<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=30%>
+				</td>
+				<td class="def1">
+					<h1><b>ALLEGANY HIGH SCHOOL<br /> CLASS OF 1957</b></h1>
+				</td>
+				<td class="def1">
+					<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=30%>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="def1">
+				
+					<div id="slideshow-container">
+						<ul id="slideshow-items">
+						<li class="slideshow-item">
+							<img src="school/school1.jpg" alt="1" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school2.jpg" alt="2" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school3.jpg" alt="3" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school4.jpg" alt="4" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school10.jpg" alt="10" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school5.jpg" alt="5" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school6.jpg" alt="6" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school7.jpg" alt="7" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school12.jpg" alt="12" />	
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school11.jpg" alt="11" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school8.jpg" alt="8" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school9.jpg" alt="9" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school13.jpg" alt="13" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school14.jpg" alt="14" />
+						</li>
+
+						<li class="slideshow-item">
+							<img src="school/school15.jpg" alt="15" />
+						</li>
+						</ul>
+					</div>
+
+				<script type="text/javascript">
+
+					var animationTime = 1000;
+
+					function nextItem() {
+						var slideshow = $('#slideshow-items');
+						slideshow.animate({
+							'margin-left' : -1 * $('.slideshow-item').width()
+						}, animationTime, function() {
+							slideshow
+								.append( $('.slideshow-item').first() )
+								.css('margin-left', 0);
+						});
+					}
+
+					var imageDurations = [
+						
+						1500
+					];
+
+					function updateSlideshow() {
+						setTimeout(function() {
+							nextItem();
+							var currImage = imageDurations.splice(0, 1);
+							imageDurations.push(currImage[0]);
+							updateSlideshow();
+						}, imageDurations[0] + animationTime);
+					}
+					
+					$(document).ready(function() {
+						$('#slideshow-items').width(parseInt($('.slideshow-item').length) * $('.slideshow-item').width());
+						updateSlideshow();
+					});
+
+				</script>
+			</td>
+
+			<td class="def1">
+				<br />				
+			
+			<br /><br />
+				<h2>Today is <script type="text/javascript">
+					
+					var months = new Array(
+					"January", "February", "March", "April",
+					"May", "June", "July", "August", "September",
+					"October", "November", "December");
+					var currentTime = new Date();
+					var month = currentTime.getMonth();
+					var day = currentTime.getDate();
+					var year = currentTime.getFullYear();
+					document.write(months[month] + " " + day + ", " + year);
+					//-->
+				</script></h2>
+				<br />
+						
+					<h4>Contact the webmaster:<br> bmillholland@hotmail.com</h4></td>
+			</td>
+
+			<td class="def1">
+				<hr size="10" width="50%" noshade color=blue>
+					<center><div id="cont_794f00074e55dd042f920b0fcd4175bd">
+  						<span id="h_794f00074e55dd042f920b0fcd4175bd">
+  						<a id="a_794f00074e55dd042f920b0fcd4175bd" 
+  						href="http://www.theweather.com/" target="_blank" rel="nofollow" 
+  						style="color:#000066;font-family:Helvetica;font-size:14px;">Cumberland weather</a></span>
+ 						<script type="text/javascript" async 
+ 						src="http://www.theweather.com/wid_loader/794f00074e55dd042f920b0fcd4175bd"></script>
+					</div></center>
+				<hr size="10" width="50%" noshade color=blue>
+			</td>
+		</tr>
+		</table>	
+				
+			<br /><br />
+
+	<div class="ticker-container">
+		<div class="ticker-wrapper">
+			<div class="ticker-transition">
+				<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=.5% height=2%>
+					<div class="ticker-item"><h2>Next luncheon: March 21, 2025, 12:00 at the Cumberland Country Club</h2></div>
+				<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=.5% height=2%>
+					<div class="ticker-item"><h2>See December luncheon pictures under the LUNCHEON tab</h2></div>
+					<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=.5% height=2%>
+					<div class="ticker-item"><h2>The 2025 luncheon schedule is now on the website</h2></div>				
+				<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=.5% height=2%>
+					<div class="ticker-item"><h2>Last update: February 28, 2025</h2></div>
+				<img src="http://cyclops153.brinkster.net/images/acampers2.png" width=.5% height=2%>
+			</div>
+		</div>
+	</div>
+
+	</BODY>
+</HTML>	
